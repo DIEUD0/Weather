@@ -1,0 +1,191 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+:root {
+	--font-color: black;
+	--bg-img: url('../images/themes/white/bg-white.png');
+	--bloc-bg-color:  #f8f9fa;
+	--go-top-button-shadow-color: 2px 2px 6px 4px #ccc;
+	--toggler-icon: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.theme-dark {
+	--font-color: #f8f9fa;
+	--bg-img: url('../images/themes/dark/bg-dark.png');
+	--bloc-bg-color: #374046;
+	--go-top-button-shadow-color: 2px 2px 6px 4px #333;
+	--toggler-icon: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--font-color);
+	background-image: var(--bg-img);
+	background-repeat: repeat;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.bigtxt {
+    font-size: 1.6em;
+}
+
+.lgtxt {
+    font-size: 1.2em;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+section > article > div,
+footer {
+    background-color: var(--bloc-bg-color);
+    margin-bottom: 16px;
+    padding: 1em 1em 0 1em;
+    border: 1px solid #e2e2e4;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+nav > div > ul > li {
+	padding: 0 3px;
+	margin: 0 3px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+nav > div > ul > li.active {
+	border: 1px dashed slategrey;
+	background-color: var(--bloc-bg-color);
+}
+
+nav > div > ul > li:hover {
+    background-color: var(--bloc-bg-color);
+}
+
+nav > div > ul > li:active {
+    background-color: slategrey;
+}
+
+a.none {
+    text-decoration: none;
+	color: inherit;
+}
+
+div.none {
+	margin: 0 -1em;
+}
+
+div.chart {
+	background-image: url('../images/bg-chart.png');
+	background-repeat: repeat-y;
+	background-size: contain;
+}
+
+#go-top {
+    color: white;
+    background-color: slategrey;
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 13px;
+    right: 13px;
+    padding: 0.7em 0.9em;
+    z-index: 51;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: var(--go-top-button-shadow-color);
+    -moz-box-shadow: var(--go-top-button-shadow-color);
+    box-shadow: var(--go-top-button-shadow-color);
+}
+
+#go-top:hover {
+    color: slategrey;
+    background-color: #e2e2e4;
+}
+
+.day {
+	background-image: url("../images/weather/day.jpg");
+	background-size: cover;
+}
+
+.day-rain {
+	background-image: url("../images/weather/day-rain.jpg");
+	background-size: cover;
+}
+
+.clouds {
+	background-image: url("../images/weather/clouds.jpg");
+	background-size: cover;
+}
+
+.night {
+	background-image: url("../images/weather/night.jpg");
+	background-size: cover;
+}
+
+.night-rain {
+	background-image: url("../images/weather/night-rain.jpg");
+	background-size: cover;
+}
+
+.snow {
+	background-image: url("../images/weather/snow.jpg");
+	background-size: cover;
+}
+
+.thunder-storm {
+	background-image: url("../images/weather/thunder-storm.jpg");
+	background-size: cover;
+}
+
+.textwbg {
+	color: white;
+	font-size: 1.1em;
+	text-shadow: 4px 4px 4px rgba(0,0,0,0.8),
+	-1px -1px 1px rgba(0,0,0,0.4),  
+	1px -1px 1px rgba(0,0,0,0.4),
+	-1px  1px 1px rgba(0,0,0,0.4),
+	1px  1px 1px rgba(0,0,0,0.4);
+}
+
+.shadow {
+	-webkit-filter: drop-shadow(4px 4px 2px rgba(0,0,0,0.8));
+	-moz-filter: drop-shadow(4px 4px 2px rgba(0,0,0,0.8));
+	filter: drop-shadow(4px 4px 2px rgba(0,0,0,0.8));
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link, .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: var(--font-color);
+}
+
+.navbar-light .navbar-toggler {
+	border-color: var(--font-color);
+}
+
+.navbar-light .navbar-toggler-icon {
+	background-image: var(--toggler-icon);
+}
+
+.gradient {
+	background-image: radial-gradient(circle, rgba(88,160,192,0.6), rgba(0,0,0,0), rgba(0,0,0,0));
+}
+
+@media all and (max-width: 450px) {
+    img {
+        height: 40px;
+		width: 40px;
+    }
+}
+
+@media all and (max-width: 415px) {
+    img {
+        height: 32px;
+		width: 32px;
+    }
+}
