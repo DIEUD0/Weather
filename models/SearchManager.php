@@ -28,15 +28,15 @@ class SearchManager extends Manager
 	 * getTimezoneName Method,
 	 * return the current timezone from the utc offset coming from Google Autocomplete Places library
 	 *
-	 * @param  int $utcOffset
+	 * @param  float $lati
+	 * @param  float $longi
 	 *
 	 * @return string
 	 */
 	public function getTimezoneName($lati, $longi)
 	{
 		date_default_timezone_set("UTC");
-		$unixTimestamp = time();
-		$url = 'https://maps.googleapis.com/maps/api/timezone/json?location='.$lati.','.$longi.'&timestamp='.$unixTimestamp.'&key='.GOOGLE_APIKEY;
+		$url = 'https://maps.googleapis.com/maps/api/timezone/json?location='.$lati.','.$longi.'&timestamp='.time().'&key='.GOOGLE_APIKEY;
 		$result = file_get_contents($url);
 		$json_tz = json_decode($result);
 

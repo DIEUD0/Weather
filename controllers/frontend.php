@@ -41,7 +41,8 @@ function showCity($day = null)
  *
  * @param  string $station
  * @param  string $country
- * @param  int $utcOffset
+ * @param  float $lati
+ * @param  float $longi
  *
  * @return void
  */
