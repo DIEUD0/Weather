@@ -2,7 +2,7 @@
 
 This app use the API : 
 * OpenWeatherMap
-* Google Place Autocomplete
+* Google Places Autocomplete
 * Google Timezone
 
 ## Installation & configuration
