@@ -16,6 +16,10 @@ define("OPENWEATHERMAP_APIKEY", "YOUR_API_KEY");
 define("GOOGLE_APIKEY", "YOUR_API_KEY");
 ```
 
+## App UML Diagram
+
+![alt text](https://github.com/DIEUD0/Weather/blob/master/UML.jpg?raw=true)
+
 ## Contributing
 Pull requests are welcome.
 
