@@ -8,8 +8,18 @@
 	<meta name="description" content="<?= DESCRIPTION ?>">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="./public/css/style.css" />
-	<link rel="icon" type="image/x-icon" href="./public/images/favicon.ico" />
-	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" /><![endif]-->
+	<link rel="apple-touch-icon" sizes="180x180" href="./public/images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./public/images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./public/images/icons/favicon-16x16.png">
+	<link rel="manifest" href="./public/images/icons/site.webmanifest">
+	<link rel="mask-icon" href="./public/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="./public/images/icons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="./public/images/icons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
 </head>
 
 <!--<?= 'Date et heure actuelle de cette ville : ' . date('j/n H:i') ?>-->

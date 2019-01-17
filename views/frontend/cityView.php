@@ -12,7 +12,7 @@ $hourSunset = date('H:i', $currentSunset);
 		<div class="textwbg <?= currentWeatherBg($currentWeather->weather[0]->id, time(), $currentSunrise, $currentSunset) ?>">
 			<span class="float-right bigtxt">
 				<?= round($currentWeather->main->temp).' '.tempTxt() ?>
-				<img src="http://openweathermap.org/img/w/<?= fixImgSunriseSunset($currentWeather->weather[0]->icon, date('H:i'), $hourSunrise, $hourSunset) ?>.png" alt="Icone <?= $currentWeather->weather[0]->description ?>">
+				<img src="https://openweathermap.org/img/w/<?= fixImgSunriseSunset($currentWeather->weather[0]->icon, date('H:i'), $hourSunrise, $hourSunset) ?>.png" class="main" alt="Icone <?= $currentWeather->weather[0]->description ?>">
 			</span>
 			<h1>
 				<i class="fas fa-city fa-sm shadow"></i>
@@ -51,7 +51,7 @@ $hourSunset = date('H:i', $currentSunset);
 
 <section class="row">
 	<?php foreach ($forecastWeather['perhour'] as $forecastPerHour): ?>
-	<article class="col-12">
+	<article class="col-12 lessmargin">
 		<div>
 			<div class="row align-items-center">
 				<div class="col-4">
@@ -67,7 +67,7 @@ $hourSunset = date('H:i', $currentSunset);
 				<div class="bold col-4">
 					<span class="float-right pb-2">
 						<?= $forecastPerHour['temp'].' '.tempTxt() ?>
-						<img src="http://openweathermap.org/img/w/<?= fixImgSunriseSunset($forecastPerHour['icon'], $forecastPerHour['hour'], $hourSunrise, $hourSunset) ?>.png" alt="Icone <?= $forecastPerHour['description'] ?>">
+						<img src="https://openweathermap.org/img/w/<?= fixImgSunriseSunset($forecastPerHour['icon'], $forecastPerHour['hour'], $hourSunrise, $hourSunset) ?>.png" alt="Icone <?= $forecastPerHour['description'] ?>">
 					</span>
 				</div>
 			</div>
@@ -96,7 +96,7 @@ $hourSunset = date('H:i', $currentSunset);
 		<div class="chart">
 			<div class="row text-center">
 				<?php foreach ($forecastWeather['perday'] as $forecastPerDay): ?>
-				<div class="col 
+				<div class="col overflowhide  
 					<?php if ($getDay == $forecastPerDay['date'][0]): ?>
 						gradient
 					<?php endif ?>">
@@ -111,7 +111,7 @@ $hourSunset = date('H:i', $currentSunset);
 							<?= implode("/", $forecastPerDay['date']) ?>
 						</p>
 						<p>
-							<img src="http://openweathermap.org/img/w/<?= $forecastPerDay['icon'] ?>.png" alt="Icone <?= $forecastPerDay['description'] ?>">
+							<img src="https://openweathermap.org/img/w/<?= $forecastPerDay['icon'] ?>.png" alt="Icone <?= $forecastPerDay['description'] ?>">
 						</p>
 					</a>
 				</div>

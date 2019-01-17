@@ -35,10 +35,7 @@ class SearchManager extends Manager
 	public function getTimezoneName($utcOffset)
 	{
 		$utcOffset = $utcOffset * 60;
-		$tz = timezone_name_from_abbr('', $utcOffset, 1);
-		if ($tz === false) {
-			$tz = timezone_name_from_abbr('', $utcOffset, 0);
-		}
+		$tz = timezone_name_from_abbr('', $utcOffset, date('I'));
 		
 		return $tz;
 	}
