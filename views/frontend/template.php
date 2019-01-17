@@ -36,7 +36,8 @@
 				</div>
 				<input id="locality" type="hidden" name="station">
 				<input id="country" type="hidden" name="country">
-				<input id="utc_offset" type="hidden" name="utc_offset">
+				<input id="latitude" type="hidden" name="latitude">
+				<input id="longitude" type="hidden" name="longitude">
 			</form>
 			<button class="navbar-toggler mb-2" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -67,7 +68,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
-	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgj8WgLORXSYX0O5qmjniez9j8XsqCBtM&libraries=places&callback=citySearch"></script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=<?= GOOGLE_APIKEY ?>&libraries=places&callback=citySearch"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.2/dist/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js" integrity="sha256-SuPHzbJ4RjnP4lvabrH9n9nPJrUZlG4SbCvTGMtpEaU=" crossorigin="anonymous"></script>
 	<script src="./public/js/autocomplete.js"></script>

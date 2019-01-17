@@ -32,11 +32,14 @@ class SearchManager extends Manager
 	 *
 	 * @return string
 	 */
-	public function getTimezoneName($utcOffset)
+	public function getTimezoneName($lati, $longi)
 	{
-		$utcOffset = $utcOffset * 60;
-		$tz = timezone_name_from_abbr('', $utcOffset, date('I'));
-		
-		return $tz;
+		date_default_timezone_set("UTC");
+		$unixTimestamp = time();
+		$url = 'https://maps.googleapis.com/maps/api/timezone/json?location='.$lati.','.$longi.'&timestamp='.$unixTimestamp.'&key='.GOOGLE_APIKEY;
+		$result = file_get_contents($url);
+		$json_tz = json_decode($result);
+
+		return $json_tz->timeZoneId;
 	}
 }

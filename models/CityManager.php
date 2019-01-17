@@ -27,7 +27,7 @@ class CityManager
 
 	public function getCurrentWeather()
 	{
-		$url = 'https://api.openweathermap.org/data/2.5/weather?lang=fr&id='.$this->_cityId.'&units='.$this->_unit.'&APPID='.APIKEY;
+		$url = 'https://api.openweathermap.org/data/2.5/weather?lang=fr&id='.$this->_cityId.'&units='.$this->_unit.'&APPID='.OPENWEATHERMAP_APIKEY;
 		$result = file_get_contents($url);
 
 		return json_decode($result);
@@ -35,7 +35,7 @@ class CityManager
 
 	public function setForecastWeather()
 	{
-		$url = 'https://api.openweathermap.org/data/2.5/forecast?lang=fr&id='.$this->_cityId.'&units='.$this->_unit.'&APPID='.APIKEY;
+		$url = 'https://api.openweathermap.org/data/2.5/forecast?lang=fr&id='.$this->_cityId.'&units='.$this->_unit.'&APPID='.OPENWEATHERMAP_APIKEY;
 		$result = file_get_contents($url);
 
 		$this->_array = json_decode($result, true);

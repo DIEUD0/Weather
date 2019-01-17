@@ -11,8 +11,8 @@ try {
 		}
 	} elseif (isset($_GET['action'])) {
 		if ($_GET['action'] == 'find') {
-			if (!empty($_POST['station']) && !empty($_POST['country']) && !empty($_POST['utc_offset'])) {
-				findCity($_POST['station'], $_POST['country'], $_POST['utc_offset']);
+			if (!empty($_POST['station']) && !empty($_POST['country']) && !empty($_POST['latitude']) && !empty($_POST['longitude'])) {
+				findCity($_POST['station'], $_POST['country'], $_POST['latitude'], $_POST['longitude']);
 			} else {
 				throw new Exception('Veuillez choisir le nom d\'une ville valide');
 			}

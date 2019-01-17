@@ -16,6 +16,8 @@ function citySearch() {
 function fillInAddress() {
 	// Get the place details from the autocomplete object.
 	var place = autocomplete.getPlace();
+	var lat = place.geometry.location.lat();
+	var lng = place.geometry.location.lng();
 
 	for (var component in componentForm) {
 		document.getElementById(component).value = '';
@@ -32,6 +34,7 @@ function fillInAddress() {
 		}
 	}
 
-	// Get the Utc Offset to define the timezone later
-	document.getElementById("utc_offset").value = place.utc_offset;
+	// Get Lati and Longi to determine the Timezone
+	document.getElementById("latitude").value = lat;
+	document.getElementById("longitude").value = lng;
 }

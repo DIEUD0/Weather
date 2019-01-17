@@ -45,12 +45,12 @@ function showCity($day = null)
  *
  * @return void
  */
-function findCity($station, $country, $utcOffset)
+function findCity($station, $country, $lati, $longi)
 {
 	$searchManager = new \OpenClassrooms\Projet5\Weather\SearchManager();
 
 	$cityId = $searchManager->getCityId($station, $country);
-	$timezoneName = $searchManager->getTimezoneName($utcOffset);
+	$timezoneName = $searchManager->getTimezoneName($lati, $longi);
 
 	if ($cityId == false) {
 		throw new Exception('Aucune station disponible dans cette ville');
