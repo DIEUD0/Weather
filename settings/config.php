@@ -1,0 +1,6 @@
+<?php
+
+define("TITLE", "META_TITLE");
+define("DESCRIPTION", "META_DESCRIPTION");
+define("OPENWEATHERMAP_APIKEY", "YOUR_API_KEY");
+define("GOOGLE_APIKEY", "YOUR_API_KEY");

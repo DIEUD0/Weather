@@ -1,7 +1,7 @@
 <?php
 
-require('config.php');
-require('utils.php');
+require('settings/config.php');
+require('settings/utils.php');
 require('controllers/frontend.php');
 
 try {

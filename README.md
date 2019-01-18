@@ -7,7 +7,13 @@ This app use the API :
 
 ## Installation & configuration
 
-Edit the file : config.php
+1. Edit the file : /models/Manager.php
+
+```php
+$db = new \PDO('mysql:host=HOST;dbname=DATABASE;charset=utf8', 'USERNAME', 'PASSWORD');
+```
+
+2. Edit the file : /settings/config.php
 
 ```php
 define("TITLE", "META_TITLE");
@@ -16,9 +22,9 @@ define("OPENWEATHERMAP_APIKEY", "YOUR_API_KEY");
 define("GOOGLE_APIKEY", "YOUR_API_KEY");
 ```
 
-## App UML Diagram
+## UML Diagram
 
-![alt text](https://github.com/DIEUD0/Weather/blob/master/UML.jpg?raw=true)
+![UML Diagram](UML.jpg)
 
 ## Contributing
 Pull requests are welcome.

@@ -6,7 +6,7 @@ abstract class Manager
 {
 	final protected function dbConnect()
 	{
-		$db = new \PDO('mysql:host=localhost;dbname=projet5;charset=utf8', 'root', '');
+		$db = new \PDO('mysql:host=HOST;dbname=DATABASE;charset=utf8', 'USERNAME', 'PASSWORD');
 
 		return $db;
 	}
