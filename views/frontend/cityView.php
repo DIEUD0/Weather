@@ -100,7 +100,7 @@ $hourSunset = date('H:i', $currentSunset);
 					<?php if ($getDay == $forecastPerDay['date'][0]): ?>
 						gradient
 					<?php endif ?>">
-					<a href="index.php?day=<?= $forecastPerDay['date'][0] ?>" class="none" data-toggle="tooltip" data-placement="top" title="<?= $forecastPerDay['description'] ?>">
+					<a href="?day=<?= $forecastPerDay['date'][0] ?>" class="none" data-toggle="tooltip" data-placement="top" title="<?= $forecastPerDay['description'] ?>">
 						<span class="
 							<?php if ($getDay == $forecastPerDay['date'][0]): ?>
 								bold

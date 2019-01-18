@@ -45,10 +45,10 @@
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<ul class="navbar-nav text-center ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="index.php"><i class="fas fa-sun fa-2x"></i><br />Météo<span class="sr-only"> (current)</span></a>
+						<a class="nav-link" href="./"><i class="fas fa-sun fa-2x"></i><br />Météo<span class="sr-only"> (current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="index.php?action=change"><i class="fas fa-thermometer-three-quarters fa-2x"></i><br />Unité</a>
+						<a class="nav-link" href="?action=change"><i class="fas fa-thermometer-three-quarters fa-2x"></i><br />Unité</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" id="toggle" href="#"><i class="fas fa-lightbulb fa-2x"></i><br />Thème</a>

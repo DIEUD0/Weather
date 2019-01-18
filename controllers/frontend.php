@@ -75,5 +75,5 @@ function changeUnits()
 	} else {
 		setcookie('units', ' ', time() + 365*24*3600, null, null, false, true);
 	}
-	header('Location: index.php');
+	header('Location: ./');
 }
