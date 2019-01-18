@@ -58,7 +58,7 @@ function findCity($station, $country, $lati, $longi)
 	} else {
 		setcookie('mycity', $cityId, time() + 365*24*3600, null, null, false, true);
 		setcookie('mytimezone', $timezoneName, time() + 365*24*3600, null, null, false, true);
-		header('Location: index.php');
+		header('Location: ./');
 	}
 }
 

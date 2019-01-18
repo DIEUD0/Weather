@@ -27,7 +27,7 @@
 <body>
 	<div class="container">
 		<nav class="navbar navbar-expand-sm navbar-light mt-3 mb-2">
-			<form action="index.php?action=find" class="form-inline mx-auto mb-2" method="post">
+			<form action="?action=find" class="form-inline mx-auto mb-2" method="post">
 				<div class="input-group">
 					<input id="autocomplete" class="form-control" placeholder="Votre ville" type="text">
 					<div class="input-group-append">
