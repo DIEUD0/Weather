@@ -7,13 +7,15 @@ This app use the API :
 
 ## Installation & configuration
 
-1. Edit the file : /models/Manager.php
+1. Create your database and import : /SQL/weather.sql
+
+2. Edit the file : /models/Manager.php
 
 ```php
 $db = new \PDO('mysql:host=HOST;dbname=DATABASE;charset=utf8', 'USERNAME', 'PASSWORD');
 ```
 
-2. Edit the file : /settings/config.php
+3. Edit the file : /settings/config.php
 
 ```php
 define("TITLE", "META_TITLE");
