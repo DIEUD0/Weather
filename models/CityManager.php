@@ -72,7 +72,7 @@ class CityManager
 			$this->_array['perhour'][$key]['hour'] = date("H:i", $value['dt']);
 			$this->_array['perhour'][$key]['icon'] = $value['weather'][0]['icon'];
 			$this->_array['perhour'][$key]['description'] = ucfirst($value['weather'][0]['description']);
-			$this->_array['perhour'][$key]['temp'] = round($value['main']['temp'], 0);
+			$this->_array['perhour'][$key]['temp'] = roundZeroFix($value['main']['temp']);
 
 			// We delete every elements of [perhour] array that do not match with $this->_day
 			if ($this->_array['perhour'][$key]['date'][0] != $this->_day) {
@@ -102,8 +102,8 @@ class CityManager
 				$this->_array['perday'][$thisDay]['date'] = explode('/', date("j/n", $value['dt']));
 				$this->_array['perday'][$thisDay]['icon'] = $value['weather'][0]['icon'];
 				$this->_array['perday'][$thisDay]['description'] = ucfirst($value['weather'][0]['description']);
-				$this->_array['perday'][$thisDay]['maxtemp'] = round($value['main']['temp_max']);
-				$this->_array['perday'][$thisDay]['mintemp'] = round($value['main']['temp_min']);
+				$this->_array['perday'][$thisDay]['maxtemp'] = roundZeroFix($value['main']['temp_max']);
+				$this->_array['perday'][$thisDay]['mintemp'] = roundZeroFix($value['main']['temp_min']);
 				$x++;
 			} else {
 				// Gather available infos between 1pm-3pm
@@ -114,8 +114,8 @@ class CityManager
 				}
 
 				// Condition with ternary operator, update max/min temp value if needed
-				$this->_array['perday'][$lastDay]['mintemp'] = round($value['main']['temp_min']) < $this->_array['perday'][$lastDay]['mintemp'] ? round($value['main']['temp_min']) : $this->_array['perday'][$lastDay]['mintemp'];
-				$this->_array['perday'][$lastDay]['maxtemp'] = round($value['main']['temp_max']) > $this->_array['perday'][$lastDay]['maxtemp'] ? round($value['main']['temp_max']) : $this->_array['perday'][$lastDay]['maxtemp'];
+				$this->_array['perday'][$lastDay]['mintemp'] = roundZeroFix($value['main']['temp_min']) < $this->_array['perday'][$lastDay]['mintemp'] ? round($value['main']['temp_min']) : $this->_array['perday'][$lastDay]['mintemp'];
+				$this->_array['perday'][$lastDay]['maxtemp'] = roundZeroFix($value['main']['temp_max']) > $this->_array['perday'][$lastDay]['maxtemp'] ? round($value['main']['temp_max']) : $this->_array['perday'][$lastDay]['maxtemp'];
 			}
 
 			// To not continue after the 5th day, because the 6th day is never complete

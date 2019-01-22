@@ -108,3 +108,21 @@ function days($day)
 	$days = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
 	return $days[$day];
 }
+
+/**
+ * roundZeroFix Function,
+ * delete "-" of rounded number equal to -0 : [-0.49 to -0.01]
+ *
+ * @param  int $number
+ *
+ * @return int
+ */
+function roundZeroFix($number)
+{
+	$rounded = round($number, 0);
+	if ($rounded == -0) {
+		return 0;
+	} else {
+		return $rounded;
+	}
+}
