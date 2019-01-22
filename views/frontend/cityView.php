@@ -11,7 +11,7 @@ $hourSunset = date('H:i', $currentSunset);
 	<article class="col-12">
 		<div class="textwbg <?= currentWeatherBg($currentWeather->weather[0]->id, time(), $currentSunrise, $currentSunset) ?>">
 			<span class="float-right bigtxt">
-				<?= round($currentWeather->main->temp).' '.tempTxt() ?>
+				<?= roundZeroFix($currentWeather->main->temp).' '.tempTxt() ?>
 				<img src="https://openweathermap.org/img/w/<?= fixImgSunriseSunset($currentWeather->weather[0]->icon, date('H:i'), $hourSunrise, $hourSunset) ?>.png" class="main" alt="Icone <?= $currentWeather->weather[0]->description ?>">
 			</span>
 			<h1>
